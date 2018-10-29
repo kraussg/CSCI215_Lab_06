@@ -30,14 +30,14 @@
 
 
     document.getElementById("age").onkeypress= function () {
-
+        var age = document.getElementById("age");
 
         var regEx = new RegExp('^(([0-9][1-9])|([1-9][0-9])|[1-9])$');
     
-        if(regEx.test(age.value)&& age >= 100) {
+        if(regEx.test(document.getElementById("age").value)) {
                 document.getElementById("age").style.backgroundColor = "red";
-                alert("Enter a correct age.");
+
         } else {
-                return age;
+                age.style.backgroundColor= "white";
         }
         };
